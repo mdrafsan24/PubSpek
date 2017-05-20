@@ -1,0 +1,94 @@
+{
+  "iOS" : [
+    {
+      "hash" : "7752af23e5cc132184e983ee4072b61a379d3057b1aef05a4e63a63a999f6874",
+      "name" : "PersonalityInsightsV2"
+    },
+    {
+      "hash" : "d6ec13b241d078364c03d21a82bf3d983da432610d9c015dac747210151c3de8",
+      "name" : "ToneAnalyzerV3"
+    },
+    {
+      "hash" : "aca7ab9008a6c5aa3e76df84f45b16af22023466310b5a8ab6bfc25c437c7070",
+      "name" : "PersonalityInsightsV3"
+    },
+    {
+      "hash" : "4b238e415619881bacacf0905380b64d7966f74f5576135e4cdaf278f5dc3087",
+      "name" : "NaturalLanguageClassifierV1"
+    },
+    {
+      "hash" : "b15ea5fb165bb43b3e92fbcb7b6d398cc1379e5a35c62500a5d60032de5e7d68",
+      "name" : "RetrieveAndRankV1"
+    },
+    {
+      "hash" : "8b65cf7526dfb78d6acd7083dbb3e8eb358cd806c3dd08bd6ad9c6211d599f4c",
+      "name" : "TradeoffAnalyticsV1"
+    },
+    {
+      "hash" : "0fb948d582a74fda3b026a82500f1fd0d83ab70184e4d9de62b355808859eb08",
+      "name" : "AlchemyVisionV1"
+    },
+    {
+      "hash" : "8b754ba69c8fc5ce8fe44d87c5e99240ed8af3dec6e898dd1dccf563d1816c20",
+      "name" : "VisualRecognitionV3"
+    },
+    {
+      "hash" : "f52bbc58cd393e0c9c2250ef20fbde36f81186226c41311be56b8e2a1ee9a548",
+      "name" : "NaturalLanguageUnderstandingV1"
+    },
+    {
+      "hash" : "259c782bc0e44210c061179184af45b98817ca5677065bee4fc45d54f1e94ede",
+      "name" : "ConversationV1"
+    },
+    {
+      "hash" : "befd8fc3a59f7bde91fbfb0cebbeb25a0768a0f5ea001508f4abb36d7a811360",
+      "name" : "TextToSpeechV1"
+    },
+    {
+      "hash" : "1c7250f119533bc9369dddd71e81b58b067697eaa711432e94a2de9216ee4c26",
+      "name" : "AlchemyDataNewsV1"
+    },
+    {
+      "hash" : "f8ae142f3472861f198ce22ee2ffdad77fb61e4587dce53ef958b3a44f1959c4",
+      "name" : "DiscoveryV1"
+    },
+    {
+      "hash" : "75b9faadb12317d326e0f325f6acb2b844565b30bac9d877bffd3dab4db2e143",
+      "name" : "LanguageTranslatorV2"
+    },
+    {
+      "hash" : "4bec447e670247dfea0d387bc68f027050d117fa5fe2d92e02f3f9471c9c5f80",
+      "name" : "DocumentConversionV1"
+    },
+    {
+      "hash" : "c0def8b22b9472c5937f20dd6baffc9b91efd345cc6fb6536ea9fcd5327c14f9",
+      "name" : "RelationshipExtractionV1Beta"
+    },
+    {
+      "hash" : "65d5d1dedf45ae0e62894413b7b9899f68737cf9289b916f0608757ce9cbe05e",
+      "name" : "DialogV1"
+    },
+    {
+      "hash" : "cd3042e014bff4c84c4ade0b6d41e35cb792ea86f67ec581a51017ce7f7d385d",
+      "name" : "RestKit"
+    },
+    {
+      "hash" : "b0a8347562aff06b50cdbd966e8c3ce714d437807d89545a010e7a20c1bdc5fa",
+      "name" : "AlchemyLanguageV1"
+    },
+    {
+      "hash" : "6537afac01fdcf3beab49dda286951c0beea859ea0d57c9bde4ab29282791281",
+      "name" : "SpeechToTextV1"
+    }
+  ],
+  "commitish" : "v0.16.0",
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "Mac" : [
+
+  ]
+}
