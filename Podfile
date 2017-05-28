@@ -8,7 +8,7 @@ target 'PubSpek' do
   # Pods for PubSpek
   pod 'Firebase/Core'
   pod 'Firebase/Storage'
-
+  pod 'SwiftyJSON'
   target 'PubSpekTests' do
     inherit! :search_paths
     # Pods for testing

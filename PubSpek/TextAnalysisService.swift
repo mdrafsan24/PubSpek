@@ -22,7 +22,7 @@ class TextAnalysisService {
     func analyzeEmotions (speech: String) {
         let failure = { (error: RestError) in print(error) }
         let toneAnalyzer = ToneAnalyzer(username: self.username, password: password, version: version)
-        // Do any additional setup after loading the view, typically from a nib.
+
         toneAnalyzer.getTone(ofText: speech, failure: failure as? ((Error) -> Void)) { tones in
             let toneData = ToneData()
             if let toneArray = tones.documentTone as? [ToneCategory] {
@@ -30,7 +30,6 @@ class TextAnalysisService {
                     if let toneScore = toneScore.tones as? [ToneScore] {
                         for tone in toneScore {
                             toneData.addDocumentTone(documentTone: tone.name, documentToneScore: tone.score)
-                            
                         }
                     }
                 }

@@ -21,10 +21,12 @@ PODS:
   - GoogleToolboxForMac/NSData+zlib (2.1.1):
     - GoogleToolboxForMac/Defines (= 2.1.1)
   - GTMSessionFetcher/Core (1.1.9)
+  - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
   - Firebase/Core
   - Firebase/Storage
+  - SwiftyJSON
 
 SPEC CHECKSUMS:
   Firebase: 284eea779b73fdff309791817da7c68bff8dd572
@@ -34,7 +36,8 @@ SPEC CHECKSUMS:
   FirebaseStorage: 8110a1ed2034c8fbfd83890d2acc9cdbbd99afec
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMSessionFetcher: 5c046c76a1f859bc9c187e918f18e4fc7bb57b5e
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 2158ec06cd41a536989c632d3b76c3797aed685c
+PODFILE CHECKSUM: 088b3bdc6874cfa826cdf47116ec1c1c0a03da6a
 
 COCOAPODS: 1.2.1.beta.1

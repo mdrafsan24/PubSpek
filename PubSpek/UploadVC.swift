@@ -60,8 +60,8 @@ class UploadVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        let mediaType = info[UIImagePickerControllerMediaType] as? String
         
+        let mediaType = info[UIImagePickerControllerMediaType] as? String
         if mediaType == (kUTTypeImage as String) {
             // A PHOTO WAS TAKEN
             self.tryAgainBtn.isHidden = false // Enable Try Again Button
@@ -74,13 +74,10 @@ class UploadVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
                     print(error!)
                     return
                 }
-                
                 storageRef.downloadURL { url, error in
                     if error != nil {
                         print("ERROR DOWNLOADING URL")
                     } else {
-                        
-                        
                         TranscribeService.instance.transcribeSpeech(url: (url?.relativeString)!)
                         
                         self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.update), userInfo: nil, repeats: true);

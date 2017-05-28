@@ -45,5 +45,7 @@
 	<string>Take a picture of your speech to transcribe </string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Turn on your microphone to analyze clarity</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Need Access To Library To Store Data </string>
 </dict>
 </plist>

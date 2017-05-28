@@ -8,20 +8,24 @@
 
 import UIKit
 
-class ReviewVC: UIViewController {
+class ReviewVC: UIViewController, UITextViewDelegate {
 
     @IBOutlet weak var transcribedText: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.transcribedText.text = TranscribeService.instance.getTranscribedText
-        
+        // Switch All Occurences of / and other unnecessary characters 
+        self.transcribedText.text = TranscribeService.instance.getTranscribedText.replacingOccurrences(of: "/", with: "I")
+        transcribedText.delegate = self
     }
+    
     @IBAction func continuePressed(_ sender: Any) {
         // Means speech was okay, analyze emotions now
-        TextAnalysisService.instance.analyzeEmotions(speech: transcribedText.text)
-        
+        print(self.transcribedText.text)
+        TextAnalysisService.instance.analyzeEmotions(speech: self.transcribedText.text)
     }
-
     
-
+    func textViewDidChange(_ textView: UITextView) {
+        self.transcribedText.text = textView.text
+    }
 }
