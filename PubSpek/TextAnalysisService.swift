@@ -16,20 +16,29 @@ class TextAnalysisService {
     private var password = "yWM5gHvR22hw"
     private var version = "2017-05-19" // use today's date for the most recent version
     
+    private var _editedSpeech: String!
+    
+    var editedSpeech: String {
+        get {
+            return _editedSpeech
+        }
+    }
+    
     static let instance = TextAnalysisService()
     
     // Used to Analyze Tones 
     func analyzeEmotions (speech: String) {
+        self._editedSpeech = speech // Sets the speech to edited speech 
         let failure = { (error: RestError) in print(error) }
         let toneAnalyzer = ToneAnalyzer(username: self.username, password: password, version: version)
 
         toneAnalyzer.getTone(ofText: speech, failure: failure as? ((Error) -> Void)) { tones in
-            let toneData = ToneData()
+            
             if let toneArray = tones.documentTone as? [ToneCategory] {
                 for toneScore in toneArray {
                     if let toneScore = toneScore.tones as? [ToneScore] {
                         for tone in toneScore {
-                            toneData.addDocumentTone(documentTone: tone.name, documentToneScore: tone.score)
+                            ToneData.instance.addDocumentTone(documentTone: tone.name, documentToneScore: tone.score)
                         }
                     }
                 }
@@ -41,14 +50,13 @@ class TextAnalysisService {
                         if let toneCategory = sentenceTones[tone.sentenceID].toneCategories as? [ToneCategory] {
                             for tones in toneCategory {
                                 for toneScore in tones.tones {
-                                    toneData.addSentenceTone(sentence: tone.text, tone: toneScore.name, score: toneScore.score)
+                                    ToneData.instance.addSentenceTone(sentence: tone.text, tone: toneScore.name, score: toneScore.score)
                                 }
                             }
                         }
                     }
                 }
             }
-            toneData.printTone()
         }
     
     }

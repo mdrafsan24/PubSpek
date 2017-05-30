@@ -51,8 +51,11 @@
 		8891AB941ECF6A71005FF3D6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8891AB931ECF6A71005FF3D6 /* GoogleService-Info.plist */; };
 		8891AB991ECF6D84005FF3D6 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8891AB981ECF6D84005FF3D6 /* Alamofire.framework */; };
 		8891AB9A1ECF6D84005FF3D6 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8891AB981ECF6D84005FF3D6 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		88ADA8A91EDA1AE200D2B8E2 /* VideoToneData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ADA8A81EDA1AE200D2B8E2 /* VideoToneData.swift */; };
 		88ADA8AB1EDA1DDE00D2B8E2 /* SpeechToTextService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ADA8AA1EDA1DDE00D2B8E2 /* SpeechToTextService.swift */; };
+		88ADA8B41EDB4B6200D2B8E2 /* SpeechToTextV1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88ADA8B31EDB4B6200D2B8E2 /* SpeechToTextV1.framework */; };
+		88ADA8B61EDB4B8100D2B8E2 /* SpeechToTextV1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88ADA8B51EDB4B8100D2B8E2 /* SpeechToTextV1.framework */; };
+		88ADA8B71EDB4B8100D2B8E2 /* SpeechToTextV1.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 88ADA8B51EDB4B8100D2B8E2 /* SpeechToTextV1.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		88ADA8B91EDBF1E400D2B8E2 /* VideoAnalysisData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ADA8B81EDBF1E300D2B8E2 /* VideoAnalysisData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +85,7 @@
 				8891AB9A1ECF6D84005FF3D6 /* Alamofire.framework in Embed Frameworks */,
 				8853FC5A1ECFC9480077AC86 /* ToneAnalyzerV3.framework in Embed Frameworks */,
 				8853FC5E1ECFCA400077AC86 /* RestKit.framework in Embed Frameworks */,
+				88ADA8B71EDB4B8100D2B8E2 /* SpeechToTextV1.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,8 +142,10 @@
 		8891AB931ECF6A71005FF3D6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8891AB961ECF6C69005FF3D6 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		8891AB981ECF6D84005FF3D6 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
-		88ADA8A81EDA1AE200D2B8E2 /* VideoToneData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoToneData.swift; sourceTree = "<group>"; };
 		88ADA8AA1EDA1DDE00D2B8E2 /* SpeechToTextService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechToTextService.swift; sourceTree = "<group>"; };
+		88ADA8B31EDB4B6200D2B8E2 /* SpeechToTextV1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpeechToTextV1.framework; path = Carthage/Build/iOS/SpeechToTextV1.framework; sourceTree = "<group>"; };
+		88ADA8B51EDB4B8100D2B8E2 /* SpeechToTextV1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpeechToTextV1.framework; path = Carthage/Build/iOS/SpeechToTextV1.framework; sourceTree = "<group>"; };
+		88ADA8B81EDBF1E300D2B8E2 /* VideoAnalysisData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoAnalysisData.swift; sourceTree = "<group>"; };
 		8F2D2DABCEF8797858BC33AE /* Pods_PubSpekTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PubSpekTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A84D947A8A2FC79AB5DC6341 /* Pods-PubSpekTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PubSpekTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PubSpekTests/Pods-PubSpekTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C36D9840F7080EB364EAEE1E /* Pods-PubSpekUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PubSpekUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PubSpekUITests/Pods-PubSpekUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -154,10 +160,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88ADA8B41EDB4B6200D2B8E2 /* SpeechToTextV1.framework in Frameworks */,
 				8853FC591ECFC9480077AC86 /* ToneAnalyzerV3.framework in Frameworks */,
 				8891AB991ECF6D84005FF3D6 /* Alamofire.framework in Frameworks */,
 				3362E66F06E2BCDF7B7874C0 /* Pods_PubSpek.framework in Frameworks */,
 				8853FC5D1ECFCA400077AC86 /* RestKit.framework in Frameworks */,
+				88ADA8B61EDB4B8100D2B8E2 /* SpeechToTextV1.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,7 +235,7 @@
 			children = (
 				880502031ECFAD8400E829B3 /* ToneData.swift */,
 				880F66E91ED894B200AF40CD /* FrameExtractor.swift */,
-				88ADA8A81EDA1AE200D2B8E2 /* VideoToneData.swift */,
+				88ADA8B81EDBF1E300D2B8E2 /* VideoAnalysisData.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -246,6 +254,7 @@
 		8834A6A41EC77E9300B6C147 = {
 			isa = PBXGroup;
 			children = (
+				88ADA8B51EDB4B8100D2B8E2 /* SpeechToTextV1.framework */,
 				8853FC611ED0C0970077AC86 /* IQKeyboardManagerSwift */,
 				8853FC5C1ECFCA400077AC86 /* RestKit.framework */,
 				8853FC581ECFC9480077AC86 /* ToneAnalyzerV3.framework */,
@@ -372,6 +381,7 @@
 		8891AB951ECF6C67005FF3D6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				88ADA8B31EDB4B6200D2B8E2 /* SpeechToTextV1.framework */,
 				8891AB961ECF6C69005FF3D6 /* Alamofire.framework */,
 				C9999C8B4A2AD3576FBAC059 /* Pods_PubSpek.framework */,
 				8F2D2DABCEF8797858BC33AE /* Pods_PubSpekTests.framework */,
@@ -394,7 +404,7 @@
 				8891AB9B1ECF6D85005FF3D6 /* Embed Frameworks */,
 				7F6A98A7CA55C51EC68B139B /* [CP] Embed Pods Frameworks */,
 				EFC591657BEA87A24241B7BF /* [CP] Copy Pods Resources */,
-				8853FC5B1ECFC9860077AC86 /* ShellScript */,
+				88ADA8B01EDB443700D2B8E2 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -576,19 +586,18 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PubSpek/Pods-PubSpek-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8853FC5B1ECFC9860077AC86 /* ShellScript */ = {
+		88ADA8B01EDB443700D2B8E2 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/ToneAnalyzerV3.framework",
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+			shellScript = "";
 		};
 		9F864FBD48B02669E4EF9840 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -703,11 +712,11 @@
 				8834A6B31EC77E9400B6C147 /* UploadVC.swift in Sources */,
 				8853FC881ED0C0980077AC86 /* IQUIView+IQKeyboardToolbar.swift in Sources */,
 				8853FC7C1ED0C0980077AC86 /* IQUIView+Hierarchy.swift in Sources */,
+				88ADA8B91EDBF1E400D2B8E2 /* VideoAnalysisData.swift in Sources */,
 				880F66EA1ED894B200AF40CD /* FrameExtractor.swift in Sources */,
 				8834A6B91EC77E9400B6C147 /* PubSpek.xcdatamodeld in Sources */,
 				8853FC961ED225190077AC86 /* VideoAnalysisService.swift in Sources */,
 				8853FC791ED0C0980077AC86 /* IQNSArray+Sort.swift in Sources */,
-				88ADA8A91EDA1AE200D2B8E2 /* VideoToneData.swift in Sources */,
 				8853FC7D1ED0C0980077AC86 /* IQUIViewController+Additions.swift in Sources */,
 				8853FC7F1ED0C0980077AC86 /* IQKeyboardManagerConstants.swift in Sources */,
 				880502061ECFB28600E829B3 /* TextAnalysisService.swift in Sources */,

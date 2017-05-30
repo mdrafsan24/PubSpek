@@ -9,6 +9,10 @@ target 'PubSpek' do
   pod 'Firebase/Core'
   pod 'Firebase/Storage'
   pod 'SwiftyJSON'
+  pod 'Freddy'
+  pod 'ObjectMapper', '~> 2.2'
+  pod 'Starscream', '~> 2.0.3'
+
   target 'PubSpekTests' do
     inherit! :search_paths
     # Pods for testing
