@@ -17,7 +17,7 @@ class TranscribeService {
     
     static let instance = TranscribeService()
     /*----------------------------------------------------------------------------------------*/
-    static let transcribeAPIKey = "b29bed3c94cb43c0a1b29f2ff07566c9" //COMPUTER VISION API
+    static let transcribeAPIKey = "0b80b10554b545cbaacd9a428173fafa" //COMPUTER VISION API
     static let transcribeAPIURL = "https://westus.api.cognitive.microsoft.com/vision/v1.0/ocr?language=en"
     /*----------------------------------------------------------------------------------------*/
     var getTranscribedText: String {

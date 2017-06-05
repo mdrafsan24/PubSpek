@@ -47,5 +47,7 @@
 	<string>Turn on your microphone to analyze clarity</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Need Access To Library To Store Data </string>
+	<key>UIAppFonts</key>
+	<array/>
 </dict>
 </plist>

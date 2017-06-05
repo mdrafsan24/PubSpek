@@ -22,20 +22,41 @@ class VideoAnalysisData {
     
     static let instance = VideoAnalysisData()
     
+    private var _numScores = 0
+    
+    var numScores: Int {
+        get {
+            return _numScores
+        }
+    }
+    
     func addScores (json: JSON) {
+        _numScores += 1
         if (!json.isEmpty) {
-            self.anger.append(json[0]["scores"]["anger"].double!)
-            self.contempt.append(json[0]["scores"]["contempt"].double!)
-            self.disgust.append(json[0]["scores"]["disgust"].double!)
-            self.fear.append(json[0]["scores"]["fear"].double!)
-            self.happiness.append(json[0]["scores"]["happiness"].double!)
-            self.neutral.append(json[0]["scores"]["neutral"].double!)
-            self.sadness.append(json[0]["scores"]["sadness"].double!)
-            self.surprise.append(json[0]["scores"]["surprise"].double!)
+            // Just to make sure we dont have nil
+            let scores = json[0]["scores"]
+            self.anger.append(scores["anger"].double!)
+            self.contempt.append(scores["contempt"].double!)
+            self.disgust.append(scores["disgust"].double!)
+            self.fear.append(scores["fear"].double!)
+            self.happiness.append(scores["happiness"].double!)
+            self.neutral.append(scores["neutral"].double!)
+            self.sadness.append(scores["sadness"].double!)
+            self.surprise.append(scores["surprise"].double!)
+
         }
     }
     
     func getAverages() -> Dictionary <String, Double> {
+        let emotions = [self.anger, self.fear, self.happiness, self.neutral, self.sadness ]
+        for emotion in emotions {
+            var emotion = emotion
+            for e in emotion {
+                if (e < 0.10) {
+                    emotion.remove(at: emotion.index(of: e)!)
+                }
+            }
+        }
         return [ "anger" : anger.reduce(0, +)/Double(anger.count),
                  "contempt" : contempt.reduce(0, +)/Double(contempt.count),
                  "disgust" : disgust.reduce(0, +)/Double(disgust.count),
@@ -45,6 +66,15 @@ class VideoAnalysisData {
                  "sadness" : sadness.reduce(0, +)/Double(sadness.count),
                  "surprise" : surprise.reduce(0, +)/Double(surprise.count)
         ]
+    }
+    
+    func reset() {
+        anger.removeAll()
+        disgust.removeAll()
+        fear.removeAll()
+        happiness.removeAll()
+        neutral.removeAll()
+        sadness.removeAll()
     }
     
 }

@@ -12,13 +12,14 @@ import AVFoundation
 
 class RecordVC: UIViewController, FrameExtractorDelegate, AVAudioRecorderDelegate {
     
-    @IBOutlet weak var startButton: RoundButton!
+    @IBOutlet weak var spekMagicProcessLBL: UILabel!
+    @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var imageView: UIImageView!
     var frameExtractor: FrameExtractor!
     var frameNumber = Int()
     var grabNumber = Int()
     var timer = Timer()
-    // var grabTimer = Timer() -> Real Time
+
     var startedRecording = false
     
     var recorder: AVAudioRecorder!
@@ -31,14 +32,43 @@ class RecordVC: UIViewController, FrameExtractorDelegate, AVAudioRecorderDelegat
         grabNumber = 1
         frameExtractor = FrameExtractor()
         frameExtractor.delegate = self
-        startButton.layer.borderWidth = 3
-        startButton.layer.borderColor = UIColor.white.cgColor
+        self.setupAudio()
+    }
+    @IBAction func backButtonPressed(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
+        // Hide the navigation bar on the this view controller
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        // Show the navigation bar on other view controllers
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.reset()
+    }
+    
+    func reset() {
+        self.startButton.isHidden = false
+        frameNumber = 1
+        grabNumber = 1
+        frameExtractor = FrameExtractor()
+        frameExtractor.delegate = self
         self.setupAudio()
     }
     
-    
-    
+    override var prefersStatusBarHidden : Bool {
+        return true
+    }
+
     func setupAudio() {
         let documents = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
         let fileName = "SpeechToText.wav"
@@ -58,7 +88,6 @@ class RecordVC: UIViewController, FrameExtractorDelegate, AVAudioRecorderDelegat
         }
         recorder.isMeteringEnabled = true
         recorder.prepareToRecord()
-        
     }
     
     func captured(image: UIImage) {
@@ -91,16 +120,15 @@ class RecordVC: UIViewController, FrameExtractorDelegate, AVAudioRecorderDelegat
     }
     @IBAction func startRecording(_ sender: UIButton) {
         if (!startedRecording) {
-            self.startButton.setTitle("Stop", for: .normal)
+            self.startButton.setImage(UIImage(named: "CameraIconRecording2"), for: .normal)
             timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.uploadFrame), userInfo: nil, repeats: true)
-            //grabTimer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(self.analyzeFrame), userInfo: nil, repeats: true)
             startedRecording = !startedRecording
         } else {
-            //self.frameExtractor.stopVideoCaptureSession()
+            self.startButton.setImage(UIImage(named: "CameraIcon2"), for: .normal)
+            self.startButton.isHidden = true
+            self.spekMagicProcessLBL.isHidden = false
             timer.invalidate()
             self.analyzeFrame()
-            //grabTimer.invalidate()
-            self.startButton.setTitle("Start", for: .normal)
             startedRecording = !startedRecording
         }
         
@@ -122,10 +150,17 @@ class RecordVC: UIViewController, FrameExtractorDelegate, AVAudioRecorderDelegat
         }
     }
     
+    /*
+     @ param: none
+     @ task: checks to make sure whether our voice output has been fully transcribed or not, when its done, we move on
+     */
     func update() {
-        if (SpeechToTextService.instance.doneTranscribingSpeechToText()) {
+        
+        if (SpeechToTextService.instance.doneTranscribingSpeechToText() && VideoAnalysisService.instance.doneAnalyzing()) {
             voiceTimer.invalidate()
             print(SpeechToTextService.instance.fullText)
+            self.spekMagicProcessLBL.isHidden = true
+            performSegue(withIdentifier: "goToResult", sender: self)
             self.frameExtractor.stopVideoCaptureSession()
         }
     }

@@ -47,6 +47,7 @@ class SpeechToTextService {
     func doneTranscribingSpeechToText() -> Bool {
         if (_fullText.characters.count > 10) {
             prepareSets()
+            _fullText = ""
             return true
         }
         return false

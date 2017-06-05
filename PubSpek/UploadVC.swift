@@ -24,6 +24,11 @@ class UploadVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
         super.viewDidLoad()
         self.continueBtnPic.isHidden = true
         self.tryAgainBtn.isHidden = true
+        self.navigationItem.setHidesBackButton(true, animated: false)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.navigationItem.setHidesBackButton(true, animated: false)
     }
     
     @IBAction func takePic(_ sender: Any) {
@@ -60,7 +65,8 @@ class UploadVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        
+        self.speechPic.layer.masksToBounds = true
+        self.speechPic.layer.cornerRadius = 10
         let mediaType = info[UIImagePickerControllerMediaType] as? String
         if mediaType == (kUTTypeImage as String) {
             // A PHOTO WAS TAKEN

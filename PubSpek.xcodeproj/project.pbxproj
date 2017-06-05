@@ -48,6 +48,9 @@
 		8853FC881ED0C0980077AC86 /* IQUIView+IQKeyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8853FC761ED0C0970077AC86 /* IQUIView+IQKeyboardToolbar.swift */; };
 		8853FC891ED0C0980077AC86 /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8853FC781ED0C0970077AC86 /* IQKeyboardManager.bundle */; };
 		8853FC961ED225190077AC86 /* VideoAnalysisService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8853FC951ED225190077AC86 /* VideoAnalysisService.swift */; };
+		8884C8FC1EE3A2770027F69F /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8884C8FB1EE3A2770027F69F /* ProgressBar.swift */; };
+		8884C8FE1EE3C9190027F69F /* ProgressDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8884C8FD1EE3C9190027F69F /* ProgressDetails.swift */; };
+		8884C9001EE4F5BF0027F69F /* SlidesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8884C8FF1EE4F5BE0027F69F /* SlidesVC.swift */; };
 		8891AB941ECF6A71005FF3D6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8891AB931ECF6A71005FF3D6 /* GoogleService-Info.plist */; };
 		8891AB991ECF6D84005FF3D6 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8891AB981ECF6D84005FF3D6 /* Alamofire.framework */; };
 		8891AB9A1ECF6D84005FF3D6 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8891AB981ECF6D84005FF3D6 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -56,6 +59,7 @@
 		88ADA8B61EDB4B8100D2B8E2 /* SpeechToTextV1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88ADA8B51EDB4B8100D2B8E2 /* SpeechToTextV1.framework */; };
 		88ADA8B71EDB4B8100D2B8E2 /* SpeechToTextV1.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 88ADA8B51EDB4B8100D2B8E2 /* SpeechToTextV1.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		88ADA8B91EDBF1E400D2B8E2 /* VideoAnalysisData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ADA8B81EDBF1E300D2B8E2 /* VideoAnalysisData.swift */; };
+		88AF814B1EE27A450039B43E /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AF814A1EE27A450039B43E /* ProgressBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,6 +143,9 @@
 		8853FC781ED0C0970077AC86 /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IQKeyboardManager.bundle; sourceTree = "<group>"; };
 		8853FC951ED225190077AC86 /* VideoAnalysisService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoAnalysisService.swift; sourceTree = "<group>"; };
 		8853FC971ED294380077AC86 /* PubSpek.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PubSpek.entitlements; sourceTree = "<group>"; };
+		8884C8FB1EE3A2770027F69F /* ProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		8884C8FD1EE3C9190027F69F /* ProgressDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressDetails.swift; sourceTree = "<group>"; };
+		8884C8FF1EE4F5BE0027F69F /* SlidesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlidesVC.swift; sourceTree = "<group>"; };
 		8891AB931ECF6A71005FF3D6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8891AB961ECF6C69005FF3D6 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		8891AB981ECF6D84005FF3D6 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
@@ -146,6 +153,7 @@
 		88ADA8B31EDB4B6200D2B8E2 /* SpeechToTextV1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpeechToTextV1.framework; path = Carthage/Build/iOS/SpeechToTextV1.framework; sourceTree = "<group>"; };
 		88ADA8B51EDB4B8100D2B8E2 /* SpeechToTextV1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpeechToTextV1.framework; path = Carthage/Build/iOS/SpeechToTextV1.framework; sourceTree = "<group>"; };
 		88ADA8B81EDBF1E300D2B8E2 /* VideoAnalysisData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoAnalysisData.swift; sourceTree = "<group>"; };
+		88AF814A1EE27A450039B43E /* ProgressBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
 		8F2D2DABCEF8797858BC33AE /* Pods_PubSpekTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PubSpekTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A84D947A8A2FC79AB5DC6341 /* Pods-PubSpekTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PubSpekTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PubSpekTests/Pods-PubSpekTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C36D9840F7080EB364EAEE1E /* Pods-PubSpekUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PubSpekUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PubSpekUITests/Pods-PubSpekUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -218,6 +226,7 @@
 				8825CC6B1ECF3763000C65F1 /* ReviewVC.swift */,
 				880F66EB1ED8A11100AF40CD /* RecordVC.swift */,
 				880F66ED1ED9026400AF40CD /* ResultVC.swift */,
+				8884C8FF1EE4F5BE0027F69F /* SlidesVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -225,7 +234,9 @@
 		8825CC681ECEA81E000C65F1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8884C8FB1EE3A2770027F69F /* ProgressBar.swift */,
 				8825CC6D1ECF3823000C65F1 /* RoundButton.swift */,
+				88AF814A1EE27A450039B43E /* ProgressBarView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -236,6 +247,7 @@
 				880502031ECFAD8400E829B3 /* ToneData.swift */,
 				880F66E91ED894B200AF40CD /* FrameExtractor.swift */,
 				88ADA8B81EDBF1E300D2B8E2 /* VideoAnalysisData.swift */,
+				8884C8FD1EE3C9190027F69F /* ProgressDetails.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -707,16 +719,20 @@
 				880502041ECFAD8400E829B3 /* ToneData.swift in Sources */,
 				8853FC811ED0C0980077AC86 /* IQKeyboardManager.swift in Sources */,
 				8825CC701ECF6148000C65F1 /* TranscribeService.swift in Sources */,
+				8884C8FE1EE3C9190027F69F /* ProgressDetails.swift in Sources */,
 				8853FC861ED0C0980077AC86 /* IQTitleBarButtonItem.swift in Sources */,
 				8853FC841ED0C0980077AC86 /* IQBarButtonItem.swift in Sources */,
 				8834A6B31EC77E9400B6C147 /* UploadVC.swift in Sources */,
 				8853FC881ED0C0980077AC86 /* IQUIView+IQKeyboardToolbar.swift in Sources */,
 				8853FC7C1ED0C0980077AC86 /* IQUIView+Hierarchy.swift in Sources */,
 				88ADA8B91EDBF1E400D2B8E2 /* VideoAnalysisData.swift in Sources */,
+				8884C9001EE4F5BF0027F69F /* SlidesVC.swift in Sources */,
 				880F66EA1ED894B200AF40CD /* FrameExtractor.swift in Sources */,
 				8834A6B91EC77E9400B6C147 /* PubSpek.xcdatamodeld in Sources */,
 				8853FC961ED225190077AC86 /* VideoAnalysisService.swift in Sources */,
 				8853FC791ED0C0980077AC86 /* IQNSArray+Sort.swift in Sources */,
+				88AF814B1EE27A450039B43E /* ProgressBarView.swift in Sources */,
+				8884C8FC1EE3A2770027F69F /* ProgressBar.swift in Sources */,
 				8853FC7D1ED0C0980077AC86 /* IQUIViewController+Additions.swift in Sources */,
 				8853FC7F1ED0C0980077AC86 /* IQKeyboardManagerConstants.swift in Sources */,
 				880502061ECFB28600E829B3 /* TextAnalysisService.swift in Sources */,

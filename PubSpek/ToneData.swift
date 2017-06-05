@@ -34,12 +34,7 @@ public class ToneData {
         return [String: Double]()
     }
     
-    /*func printTone() {
-        for tone in self.documentTones {
-            print(tone)
-        }
-        for sTone in sentetnceTones {
-            print(sTone)
-        }
-    }*/
+    func reset() {
+        documentTones.removeAll()
+    }
 }
