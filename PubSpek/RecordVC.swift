@@ -28,11 +28,8 @@ class RecordVC: UIViewController, FrameExtractorDelegate, AVAudioRecorderDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        frameNumber = 1
-        grabNumber = 1
-        frameExtractor = FrameExtractor()
-        frameExtractor.delegate = self
-        self.setupAudio()
+        reset()
+        
     }
     @IBAction func backButtonPressed(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
@@ -95,19 +92,21 @@ class RecordVC: UIViewController, FrameExtractorDelegate, AVAudioRecorderDelegat
     }
     
     func uploadFrame() {
-        let storageRef = Storage.storage().reference().child("\(frameNumber)")
+        let userId = RandomID.instance.userId
+        let storageRef = Storage.storage().reference().child("\(userId)-\(frameNumber)")
         frameNumber = frameNumber+1
         let data = UIImageJPEGRepresentation(imageView.image!, 0.8)
-            storageRef.putData(data!, metadata: nil, completion: { (metadata, error) in
-                if error != nil {
-                    print(error as Any)
-                    return
-                }
-            })
+        storageRef.putData(data!, metadata: nil, completion: { (metadata, error) in
+            if error != nil {
+                print(error as Any)
+                return
+            }
+        })
     }
     func analyzeFrame() {
-        let storageRef = Storage.storage().reference().child("\(grabNumber)")
-        while (grabNumber != frameNumber) { // Do some last minute checks 
+        let userId = RandomID.instance.userId
+        let storageRef = Storage.storage().reference().child("\(userId)-\(grabNumber)")
+        while (grabNumber != frameNumber) { // Do some last minute checks
             grabNumber = grabNumber+1
             storageRef.downloadURL { url, error in
                 if error != nil {
@@ -155,7 +154,6 @@ class RecordVC: UIViewController, FrameExtractorDelegate, AVAudioRecorderDelegat
      @ task: checks to make sure whether our voice output has been fully transcribed or not, when its done, we move on
      */
     func update() {
-        
         if (SpeechToTextService.instance.doneTranscribingSpeechToText() && VideoAnalysisService.instance.doneAnalyzing()) {
             voiceTimer.invalidate()
             print(SpeechToTextService.instance.fullText)

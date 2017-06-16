@@ -28,6 +28,7 @@ class UploadVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
     }
     
     override func viewDidAppear(_ animated: Bool) {
+
         self.navigationItem.setHidesBackButton(true, animated: false)
     }
     
@@ -73,7 +74,10 @@ class UploadVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
             self.tryAgainBtn.isHidden = false // Enable Try Again Button
             self.processingSpeech.isHidden = false
             self.speechPic.image = info[UIImagePickerControllerOriginalImage] as? UIImage // CANT CAST AS EXPLICITLY
-            let storageRef = Storage.storage().reference().child("Speech")
+            RandomID.instance.createId() // Only call once since creating new one
+            let userID = RandomID.instance.userId
+            print(userID)
+            let storageRef = Storage.storage().reference().child("\(userID)").child("Speech")
             let uploadData = UIImageJPEGRepresentation(self.speechPic.image!, 0.8) // Quality Of the Image is Here
             storageRef.putData(uploadData!, metadata: nil, completion: { (metadata, error) in
                 if error != nil {

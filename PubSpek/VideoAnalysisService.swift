@@ -12,7 +12,7 @@ import Firebase
 import SwiftyJSON
 class VideoAnalysisService {
     static let instance = VideoAnalysisService()
-    static let apiKey = "88bb6a2dc75846c081e37da8fbf667ec" /// set in constants file
+    static let apiKey = "c3947a8ef7524a3bb94206468ce48805" /// set in constants file
     static let apiUrl = "https://westus.api.cognitive.microsoft.com/emotion/v1.0/recognize"
     private var numReqs = 0
 
@@ -25,12 +25,13 @@ class VideoAnalysisService {
         let request = Alamofire.request(VideoAnalysisService.apiUrl, method: .post, parameters: params, encoding: JSONEncoding.default, headers: header)
         
         numReqs += 1
-        
+        print(request)
         request.responseJSON { (response) in
-            //print(response)
+            print(response)
             switch response.result {
             case .success(let data):
-                //print(data)
+                // REQUEST OK! RESPONSE OK BUT FAILED TO DOWNLOAD
+                print(data)
                 let json = JSON(data)
                 if (json[0]["scores"]["anger"].double != nil) {
                     VideoAnalysisData.instance.addScores(json: json)

@@ -11,10 +11,9 @@ import ToneAnalyzerV3
 import RestKit
 
 class TextAnalysisService {
-    private var apiKey = "c690ef0910c6a4928c4d98245d6c3015ab8bca0d"
-    private var username = "b64c9a34-00d6-48ab-b252-daf4d4ce05c5"
-    private var password = "yWM5gHvR22hw"
-    private var version = "2017-05-19" // use today's date for the most recent version
+    private var username = "d4ffa3e7-c674-4ef2-a1f1-17445545726d"
+    private var password = "4Aw1nSIITHbZ"
+    private var version = "2017-06-09" // use today's date for the most recent version
     
     private var _editedSpeech: String!
     

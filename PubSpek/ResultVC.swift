@@ -10,8 +10,8 @@ import UIKit
 
 class ResultVC: UIViewController {
 
-    @IBOutlet weak var emotionYouNeedLBL: UITextView!
-    @IBOutlet weak var wordsNeedToBeCarefulLbl: UITextView!
+    @IBOutlet weak var emotionYouNeedLBL: UILabel!
+    @IBOutlet weak var wordsNeedToBeCarefulLbl: UILabel!
     /*
      Overall scoring system:
      If video emotion score is greater than document tone than its 100% accurate. Else just tell the user to show a little bit more of that emotion. 
@@ -31,7 +31,6 @@ class ResultVC: UIViewController {
     private var emotionPercent = 60
     private var wordPercent = 40
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.reset()
@@ -50,6 +49,8 @@ class ResultVC: UIViewController {
         VideoAnalysisData.instance.reset()
 
     }
+    
+    // Fix TextFieldView middle start problem 
     
     func reset() {
         emotionsMissing = [String]()
@@ -86,16 +87,16 @@ class ResultVC: UIViewController {
             return "Way too many, either you didn't speak louadly enough, had too much background noise or got something in your mouth..."
         }
         if (missingWords.count >= 15 && missingWords.count < 20) {
-            self.wordPercent = self.wordPercent - 30
-        }
-        if (missingWords.count >= 10 && missingWords.count < 15) {
             self.wordPercent = self.wordPercent - 20
         }
-        if (missingWords.count >= 5 && missingWords.count < 10) {
+        if (missingWords.count >= 10 && missingWords.count < 15) {
             self.wordPercent = self.wordPercent - 10
         }
-        if (missingWords.count > 0 && missingWords.count < 5) {
+        if (missingWords.count >= 5 && missingWords.count < 10) {
             self.wordPercent = self.wordPercent - 5
+        }
+        if (missingWords.count > 0 && missingWords.count < 5) {
+            self.wordPercent = self.wordPercent - 2
         }
         
         var missingWords = missingWords.joined(separator: ", ").trimmingCharacters(in: .whitespaces)
@@ -121,6 +122,11 @@ class ResultVC: UIViewController {
             self.emotionPercent = 60
             return overallCommentary
         }
+        var wayMoreArr = [String]()
+        var bitMoreArr = [String]()
+        var tidbitMoreArr = [String]()
+        var onPointArr = [String]()
+        
         for emotion in emotionMissingArr {
             var differenceInEmotion = 0.0
             switch emotion {
@@ -137,26 +143,42 @@ class ResultVC: UIViewController {
             default: ()
                 
             }
+
             
             if (differenceInEmotion >= 0.60) {
-                overallCommentary = overallCommentary + "You need to be way more \(emotion.lowercased()). "
+                wayMoreArr.append(emotion.lowercased())
                 self.emotionPercent = self.emotionPercent - 12
 
             }
             if (differenceInEmotion >= 0.35 && differenceInEmotion < 0.60) {
-                overallCommentary = overallCommentary + "You need to be a bit more \(emotion.lowercased()). "
+                bitMoreArr.append(emotion.lowercased())
                 self.emotionPercent = self.emotionPercent - 8
             }
             if (differenceInEmotion >= 0.10 && differenceInEmotion < 0.35) {
-                overallCommentary = overallCommentary + "Act a tidbit more \(emotion.lowercased()). "
+                tidbitMoreArr.append(emotion.lowercased())
                 self.emotionPercent = self.emotionPercent - 4
             }
             if (differenceInEmotion >= 0.0 && differenceInEmotion < 0.10) {
-                overallCommentary = overallCommentary + "Your \(emotion.lowercased())self is on point though!"
+                onPointArr.append(emotion.lowercased())
                 self.emotionPercent = self.emotionPercent - 4
             }
-           
+            
         }
+        if (wayMoreArr.count > 0) {
+            overallCommentary += "You need to be way more " + wayMoreArr.joined(separator: ", ") + ". "
+        }
+        if (bitMoreArr.count > 0) {
+            overallCommentary += "You need to be a bit more " + bitMoreArr.joined(separator: ", ") + ". "
+        }
+        if (tidbitMoreArr.count > 0) {
+            overallCommentary += "You need to be a tidbit more " + tidbitMoreArr.joined(separator: ", ") + ". "
+        }
+        if (onPointArr.count > 0) {
+            overallCommentary += "Your " + onPointArr.joined(separator: ", ") + "self is on point though!" + ". "
+        }
+        print(overallCommentary)
         return overallCommentary
     }
+    
+    
 }
