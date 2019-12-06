@@ -1,6 +1,6 @@
 <img src="https://github.com/mdrafsan24/PubSpek/blob/master/PubSpek/Assets.xcassets/LaunchScreen.imageset/Untitled03@2x.png?raw=true" alt="PubSpek" title="PubSpek" align="right" height="120" />
 
-# Anti-Social Club for iOS
+# PubSpek iOS
 (Removed from the App Store)
 
 The Anti-Social Club is a cross-platform fully anonymous message board for students at the University at Buffalo to exchange ideas, photos, events, and other campus related information. In order to join, you must be a student at UB and have been invited by an existing member. Each member invited by another student receives one access key, allowing them to invite one friend into the club. Students who sign up with Pioneer access keys shown on the flyers will receive two access keys.
