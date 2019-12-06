@@ -33,7 +33,7 @@ Download PubSpek today and become a killer speaker!
 * Tone Analysis
   - Analyzes users tonality throughout the speech and at specific text using IBM Tone analyzer. 
 
-<img src="http://arthurdearaujo.com/ub-anti-socialclub-compose-post.png" alt="UB Anti-Social Club Screenshot 1" width="135"/><img src="http://arthurdearaujo.com/ub-anti-socialclub-reported-post.png" alt="UB Anti-Social Club Screenshot 1" width="135" /><img src="http://arthurdearaujo.com/ub-anti-socialclub-homepage.png" alt="UB Anti-Social Club Screenshot 1" width="135"/><img src="http://arthurdearaujo.com/ub-anti-socialclub-comments.png" alt="UB Anti-Social Club Screenshot 1" width="135"/><img src="http://arthurdearaujo.com/ub-anti-socialclub-settings.png" alt="UB Anti-Social Club Screenshot 1" width="135"/><img src="http://arthurdearaujo.com/ub-anti-socialclub-access-keys.png" alt="UB Anti-Social Club Screenshot 1" width="135"/>
+<img src="http://i-cdn.phonearena.com/images/articles/291784-image/Pubspek.jpg" alt="UB Anti-Social Club Screenshot 1"/>
 
 ## <a name="built-with"></a>Built With
 
