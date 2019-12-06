@@ -13,7 +13,7 @@ PubSpek is the worlds first application that gives you feedback on your presenta
 We all know the saying "Practice makes perfect" - and thats no different when it comes to public speaking! 
 Download PubSpek today and become a killer speaker!
 
-<img src="http://arthurdearaujo.com/screenshot1.png" alt="UB Anti-Social Club Screenshot 1" width="160" /> <img src="https://i.ibb.co/2yCG4CJ/Pubspek.jpg" alt="UB Anti-Social Club Screenshot 1" width="160" /> 
+<img src="https://i.ibb.co/2yCG4CJ/Pubspek.jpg" alt="UB Anti-Social Club Screenshot 1" width="400" /> 
 
 ## Table of Contents
 
