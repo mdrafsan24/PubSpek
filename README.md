@@ -1,4 +1,4 @@
-<img src="https://github.com/mdrafsan24/PubSpek/blob/master/PubSpek/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@3x.png?raw=true" alt="PubSpek" title="PubSpek" align="right" height="120" />
+<img src="https://github.com/mdrafsan24/PubSpek/blob/master/PubSpek/Assets.xcassets/LaunchScreen.imageset/Untitled03@2x.png?raw=true" alt="PubSpek" title="PubSpek" align="right" height="120" />
 
 # Anti-Social Club for iOS
 (Removed from the App Store)
