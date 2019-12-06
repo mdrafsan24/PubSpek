@@ -25,35 +25,13 @@ Download PubSpek today and become a killer speaker!
 
 ## <a name="key-features"></a>Key Features
 
-* Email Verification
-  - Checked with SUNY Buffalo's student directory to confirm the user is a student at UB
-  - Emailed a verification code after UB student confirmation
-  <img src="http://arthurdearaujo.com/ub-anti-socialclub-register-method.png" alt="UB Anti-Social Club Screenshot 1" width="750" />
-* Infinity Scrolling
-  - As the user scrolls down, more posts load
-* Composing Posts
-  - Users may include a picture if they choose
-* Reporting
-  - Once a post has a certain amount of reports, the user will be warned about the content and required to tap to reveal that post
-* Voting on Posts
-  - Users can only vote once on a post
-* Following Posts / Notifications
-  - Users may long press on a post to follow it, displaying a colored bar on the left side
-  - Users will receive notifications whenever someone comments or votes on that followed post
-  - Users automagically follow the posts they compose
-* Anonymous Commenting
-  - Different users will have a different randomly generated color unique to that post
-  - The owner of the post will have a comment with a bolded font and the app's teal color
-* Access Keys
-  - Needed to create an account. 
-  - Each member invited by another student receives one access key, allowing them to invite one friend into the club.
-  - Students who sign up with Pioneer access keys shown on the flyers will receive two access keys.
-* Ranks
-  - Admin: able to permanently ban and silence
-  - Moderator: able to temporarily ban and silence
-  - Pioneer: given two access keys for getting an access key from a flyer
-  - Member: given one access key for getting an access key from another user
-  - If you are designated as Moderator or Admin and long press on a post, in addition to being able to follow the post, you are able to silence (not allowing to comment or post) or ban a user.
+* Real time facial analysis
+  - Extracts frames every second from users video then analyzes and stores facial expression data, allowing close to real time     cognitive analysis. 
+* Text Analysis
+  - Optical Character Recognition allows users to simply scan speech / text. 
+  - Using Google cloud vision API and Azure Text Analytics, pinpoints emotional mismatch at specific times. 
+* Tone Analysis
+  - Analyzes users tonality throughout the speech and at specific text using IBM Tone analyzer. 
 
 <img src="http://arthurdearaujo.com/ub-anti-socialclub-compose-post.png" alt="UB Anti-Social Club Screenshot 1" width="135"/><img src="http://arthurdearaujo.com/ub-anti-socialclub-reported-post.png" alt="UB Anti-Social Club Screenshot 1" width="135" /><img src="http://arthurdearaujo.com/ub-anti-socialclub-homepage.png" alt="UB Anti-Social Club Screenshot 1" width="135"/><img src="http://arthurdearaujo.com/ub-anti-socialclub-comments.png" alt="UB Anti-Social Club Screenshot 1" width="135"/><img src="http://arthurdearaujo.com/ub-anti-socialclub-settings.png" alt="UB Anti-Social Club Screenshot 1" width="135"/><img src="http://arthurdearaujo.com/ub-anti-socialclub-access-keys.png" alt="UB Anti-Social Club Screenshot 1" width="135"/>
 
