@@ -14,7 +14,7 @@ We all know the saying "Practice makes perfect" - and thats no different when it
 Download PubSpek today and become a killer speaker!
 <img src="https://i.ytimg.com/vi/y11A419z8Mo/maxresdefault.jpg" alt="PubSpek"> 
 <p align="center">
-  <img src="https://i.ibb.co/gRFjntd/N4c3K.jpg" alt="PubSpek"> 
+  <img src="https://www.techrum.vn/chevereto/images/2017/06/21/N4c3K.jpg" alt="PubSpek"> 
 </p>
 
 ## Table of Contents
