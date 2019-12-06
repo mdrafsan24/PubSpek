@@ -3,9 +3,14 @@
 # PubSpek iOS
 (Removed from the App Store)
 
-The Anti-Social Club is a cross-platform fully anonymous message board for students at the University at Buffalo to exchange ideas, photos, events, and other campus related information. In order to join, you must be a student at UB and have been invited by an existing member. Each member invited by another student receives one access key, allowing them to invite one friend into the club. Students who sign up with Pioneer access keys shown on the flyers will receive two access keys.
+PubSpek is the worlds first application that gives you feedback on your presentation and helps you pinpoint core issues related to public speaking!
 
-The Anti-Social Club is in no way, shape, or form affiliated with, or run by, the University at Buffalo.
+- Analyzes your expressions to point out what emotions missing
+- Analyzes your speech to give you a better understanding of the words your should be careful about
+- Easy to understand and requires only three steps!
+- Great tool for practicing public speaking skills (Students, Business Speeches, Class Presentations etc.)
+
+We all know the saying "Practice makes perfect" - and thats no different when it comes to public speaking! Download PubSpek today and become a killer speaker!
 
 <img src="http://arthurdearaujo.com/screenshot1.png" alt="UB Anti-Social Club Screenshot 1" width="160" /> <img src="http://arthurdearaujo.com/screenshot2.png" alt="UB Anti-Social Club Screenshot 1" width="160" /> <img src="http://arthurdearaujo.com/screenshot3.png" alt="UB Anti-Social Club Screenshot 1" width="160" /> <img src="http://arthurdearaujo.com/screenshot4.png" alt="UB Anti-Social Club Screenshot 1" width="160" /> <img src="http://arthurdearaujo.com/screenshot5.png" alt="UB Anti-Social Club Screenshot 1" width="160" />
 
