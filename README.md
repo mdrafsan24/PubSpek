@@ -15,6 +15,13 @@ Download PubSpek today and become a killer speaker!
 
 <img src="https://i.ibb.co/2yCG4CJ/Pubspek.jpg" alt="PubSpek" class="center" width="600" /> 
 
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
 ## Table of Contents
 
 * [Key Features](#key-features)
