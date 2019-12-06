@@ -37,17 +37,15 @@ Download PubSpek today and become a killer speaker!
 
 ## <a name="built-with"></a>Built With
 
-* [SwiftJSON](https://github.com/SwiftyJSON/SwiftyJSON) - Used to make it easy to deal with JSON data in Swift.
-* [AlamoFire](https://github.com/Alamofire/Alamofire) - Used to communicate with the backend
-* [Fusuma](https://github.com/ytakzk/Fusuma) - Used instead of UIImagePickerController
-* [Fabric](https://www.fabric.io) - Used for analytics
-* [Whisper](https://github.com/hyperoslo/Whisper) - Used for in-app notifications
-* [Spring](https://github.com/MengTo/Spring) - Used for animations
-* [Firebase Core Messaging](https://firebase.google.com/docs/cloud-messaging/) - Used for cross-platform messaging
+* [Firebase](https://github.com/firebase/firebase-ios-sdk) - Used as the backend to collect textual and media data.
+* [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON) - Allows easier parsing of JSON data
+* [Freddy](https://github.com/bignerdranch/Freddy) - A reusable framework for parsing JSON in Swift.
+* [ObjectMapper](https://github.com/tristanhimmelman/ObjectMapper) - Simple JSON Object mapping written in Swift
+* [Starscream](https://github.com/daltoniam/Starscream) - Websockets in swift for iOS and OSX
+* [IBM](https://github.com/ibm-watson-iot/iot-starter-for-ios) - Used for tone analysis
+* [Microsoft Cognitive Services](https://github.com/microsoft/BotBuilder-CognitiveServices) - Used for video analysis
 
 
 ## <a name="developers">Developers
 
-* Arthur De Araujo (iOS app & Designs) · [GitHub](https://github.com/wafflez180) · [Website](http://www.arthurdearaujo.com/)
-* Declan Hopkins (Android app & Backend) · [GitHub](https://github.com/Dooskington) · [Website](http://www.declanhopkins.com/)
-
+* MD R CHOWDHURY (iOS app & Designs) · [GitHub](https://github.com/mdrafsan24) · [CV](https://www.linkedin.com/in/mdrafsan/)
