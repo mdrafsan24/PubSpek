@@ -1,7 +1,6 @@
 <img src="https://github.com/mdrafsan24/PubSpek/blob/master/PubSpek/Assets.xcassets/LaunchScreen.imageset/Untitled03@2x.png?raw=true" alt="PubSpek" title="PubSpek" align="right" height="120" />
 
 # PubSpek iOS
-(Removed from the App Store)
 
 PubSpek is the worlds first application that gives you feedback on your presentation and helps you pinpoint core issues related to public speaking!
 
